@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaaSier - Premium SaaS Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      // Inline script to prevent FOUC (Flash of Unstyled Content)
+      (function() {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            // Default to dark mode
+            document.documentElement.classList.add('dark');
+          }
+        } catch (_) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              // New Palette: Aurora Dawn
+              primary: {
+                '500': '#f97316', // orange-500
+                '600': '#ea580c', // orange-600
+              },
+              secondary: {
+                '400': '#2dd4bf', // teal-400
+                '500': '#14b8a6', // teal-500
+              },
+              dark: {
+                '900': '#0d1120',
+                '950': '#080c1b',
+              }
+            },
+            animation: {
+              blob: 'blob 15s infinite ease-in-out',
+            },
+            keyframes: {
+              blob: {
+                '0%, 100%': {
+                  transform: 'translateY(0) translateX(0) scale(1)',
+                },
+                '25%': {
+                  transform: 'translateY(40px) translateX(-60px) scale(1.1)',
+                },
+                '50%': {
+                  transform: 'translateY(-20px) translateX(30px) scale(0.9)',
+                },
+                '75%': {
+                  transform: 'translateY(30px) translateX(-40px) scale(1.05)',
+                },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Simple scrollbar styling for a modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      html:not(.dark) ::-webkit-scrollbar-track {
+        background: #f1f5f9; /* slate-100 */
+      }
+      html.dark ::-webkit-scrollbar-track {
+        background: #080c1b; /* dark-950 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #94a3b8; /* slate-400 */
+        border-radius: 4px;
+      }
+      html.dark ::-webkit-scrollbar-thumb {
+        background: #334155; /* slate-700 */
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b; /* slate-500 */
+      }
+      html.dark ::-webkit-scrollbar-thumb:hover {
+        background: #475569; /* slate-600 */
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.12"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-white dark:bg-dark-950 text-slate-800 dark:text-slate-100 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
