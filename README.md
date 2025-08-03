@@ -126,7 +126,7 @@ pastel gradient background, clean SaaS landing page style."
 
 <div align="center">
 
-Built with ❤️ by **[Srinidhi N S](https://yourportfolio.com)**  
+Built with ❤️ by **[Srinidhi N S](https://my-portfolio-six-sooty-42.vercel.app/)**  
 Inspired by high-end SaaS UIs (Stripe, Linear, Hyer)  
 Created for **AI Vibe Coder – Founding Engineer Challenge**
 
