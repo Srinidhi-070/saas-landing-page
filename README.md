@@ -97,7 +97,7 @@ npm run dev
 
 ## 🤝 Contact & Credits
 
-- Built with ❤️ by [Your Name](https://yourportfolio.com)
+- Built with ❤️ by [Srinidhi N S](https://yourportfolio.com)
 - Inspired by high-end SaaS UIs (Stripe, Linear, Hyer)
 - Created for **AI Vibe Coder – Founding Engineer Challenge**
 
